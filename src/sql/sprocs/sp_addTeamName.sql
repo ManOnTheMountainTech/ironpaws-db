@@ -1,0 +1,7 @@
+CREATE PROCEDURE `sp_addTeamName`(IN `teamName` VARCHAR(255)) 
+COMMENT 'Adds a team name' 
+DETERMINISTIC MODIFIES SQL DATA 
+SQL SECURITY INVOKER 
+BEGIN 
+    INSERT INTO team_name (`name_tn`) VALUES (teamName); 
+END
