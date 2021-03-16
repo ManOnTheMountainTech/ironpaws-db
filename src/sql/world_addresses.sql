@@ -21,6 +21,7 @@ SET time_zone = "+00:00";
 --
 -- Database: `bryany_mush`
 --
+USE bryany_mush;
 
 -- --------------------------------------------------------
 
@@ -48,7 +49,10 @@ CREATE TABLE `world_addresses` (
 -- Dumping data for table `world_addresses`
 --
 
-INSERT INTO `world_addresses` (`id_wa_ai`, `address_wa`, `po_box_wa`, `city_wa`, `state_iso_code_wa`, `district_iso_code_wa`, `neighborhood_wa`, `postal_code_wa`, `country_iso_code_wa`, `suplemental_wa`, `department_wa`, `building_name_wa`, `type_wa`) VALUES
+INSERT INTO `world_addresses` (`id_wa_ai`, `address_wa`, `po_box_wa`, `city_wa`, 
+  `state_iso_code_wa`, `district_iso_code_wa`, `neighborhood_wa`, 
+  `postal_code_wa`, `country_iso_code_wa`, 
+  `supplemental_wa`, `department_wa`, `building_name_wa`, `type_wa`) VALUES
 (1, '2121 Pasco Road', 0, 'Cle Elum', 'WA', NULL, NULL, '98922', '840', NULL, '', '', 'mailing'),
 (2, 'P.O. Box 1234', 0, 'Big Lake', 'AK', NULL, NULL, '99999', '840', NULL, '', '', 'mailing'),
 (3, 'P.O. Box 1', 0, 'Two Rivers', 'AK', NULL, NULL, '99998', '840', NULL, '', '', 'mailing'),
@@ -58,7 +62,7 @@ INSERT INTO `world_addresses` (`id_wa_ai`, `address_wa`, `po_box_wa`, `city_wa`,
 (7, 'Hans Egedesvej 29', 199, NULL, NULL, NULL, NULL, 'DK-3900 Nuuk', '304', NULL, '', '', 'mailing'),
 (9, 'Av. Rivadavia 2403', 0, 'Buenos Aires', NULL, NULL, NULL, 'C1473GTH', '032', NULL, '', '', 'mailing'),
 (10, 'PSC 769', 700, '', 'APO', NULL, NULL, '96599-9998', '840', NULL, '', '', 'mailing'),
-(11, ' Tastentanzenstrasse 5/16 ', NULL, 'Zürich', NULL, NULL, NULL, NULL, '756', NULL, '', '', 'mailing'),
+(11, 'Tastentanzenstrasse 5/16 ', NULL, 'Zürich', NULL, NULL, NULL, NULL, '756', NULL, '', '', 'mailing'),
 (12, 'Lansstraße 81', NULL, 'Berlin', NULL, NULL, NULL, 'D-11179', '276', NULL, NULL, NULL, 'mailing'),
 (13, 'Roslagsgatan 10 ', NULL, 'Stockholm', NULL, NULL, NULL, '113 51', '752', NULL, NULL, NULL, 'mailing'),
 (14, 'Denkmaschinenstrasse 1024', 230, 'Zürich', NULL, NULL, NULL, '4096', '', NULL, NULL, NULL, 'mailing');
