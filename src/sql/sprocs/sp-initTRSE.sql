@@ -1,8 +1,8 @@
-USE `bryany_mush`;
+#USE `bryan_mush`;
 DROP procedure IF EXISTS `sp_initTRSE`;
 
 DELIMITER $$
-USE `bryany_mush`$$
+
 CREATE PROCEDURE `sp_initTRSE` (IN wc_orderId INT, IN raceStageInstance_fk INT, IN team_fk INT)
 BEGIN
 	INSERT INTO team_race_stage_entry (`trse_race_stage_instance_fk`, `trse_team_fk`, `wc_order_id_trse`) 

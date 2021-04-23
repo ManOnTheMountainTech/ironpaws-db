@@ -1,5 +1,5 @@
 DELIMITER $$
-USE `bryany_mush`$$
+#USE `bryan_mush`$$
 CREATE PROCEDURE `sp_getMushersTeams`(IN wc_customerId INT)
     COMMENT 'Gets the teams the musher has created' 
     DETERMINISTIC READS SQL DATA 

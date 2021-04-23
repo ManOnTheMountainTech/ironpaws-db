@@ -1,9 +1,8 @@
-USE `bryany_mush`;
+USE `bryan_mush`;
 DROP procedure IF EXISTS `sp_addTeamName`;
 
 DELIMITER $$
-USE `bryany_mush`$$
-CREATE DEFINER=`bryany_mushuser`@`71.231.205.31`
+USE `bryan_mush`$$
 CREATE PROCEDURE `sp_addTeamName` (IN teamName VARCHAR(255))
 COMMENT 'Adds a team name'
 SQL SECURITY INVOKER
