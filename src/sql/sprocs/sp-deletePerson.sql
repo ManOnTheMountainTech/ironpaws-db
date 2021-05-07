@@ -6,22 +6,32 @@ CREATE  PROCEDURE `sp_deletePerson`(IN wc_customerIdArg INT)
     SQL SECURITY INVOKER
     COMMENT 'Deletes a person from the database. All awards, positions, teams, and dogs are destroyed.'
 BEGIN
-    CALL sp_deleteDTA(wc_customerIdArg);
+    SET @person = sf_getPersonIdFromWPUserId(wc_customerIdArg);
 
-    DELETE FROM teams WHERE team_person_fk = wc_customerIdArg;
-    DELETE FROM social_event_leaders WHERE id_sel_ai = wc_customerIdArg;
-    DELETE FROM region_cocaptains WHERE rc_person_fk = wc_customerIdArg;
-    DELETE FROM race_managers WHERE rm_person_fk = wc_customerIdArg;
-    DELETE FROM phones WHERE phone_person_id = wc_customerIdArg;
-    DELETE FROM non_racing_participation WHERE nrp_people_fk = wc_customerIdArg;
-
+    CALL sp_getTeamsFromPersonIdAsTable(@person);
     DELETE FROM awards_granted 
-        WHERE ('team' = entity_type) AND (wc_customerIdArg = id_of_entity);
+        WHERE ('team' = entity_type) AND (id_of_entity IN (SELECT * FROM team_clones));
+    DROP TABLE team_clones; # Memory thriftiness
+    
+    CALL sp_getDogsFromPersonIdAsTable(@person); 
+    DELETE FROM awards_granted 
+        WHERE ('dog' = entity_type) AND (id_of_entity IN (SELECT * FROM dog_clones));  
+    
+    DELETE FROM awards_granted 
+        WHERE ('person' = entity_type) AND (@person = id_of_entity);
 
-    DELETE FROM dogs WHERE dog_people_fk = wc_customerIdArg;
-
-    DELETE FROM admins WHERE admin_person_fk = wc_customerIdArg;
-    DELETE FROM people WHERE wc_customer_id = wc_customerIdArg;
+    DELETE FROM dog_team_assignments WHERE dta_dog_fk IN (SELECT * FROM dog_clones);
+    
+    #delete race instances
+    DELETE FROM teams WHERE team_person_fk = @person;
+    DELETE FROM social_event_leaders WHERE id_sel_person_fk = @person;
+    DELETE FROM region_cocaptains WHERE rc_person_fk = @person;
+    DELETE FROM race_managers WHERE rm_person_fk = @person;
+    DELETE FROM phones WHERE phone_person_id = @person;
+    DELETE FROM non_racing_participation WHERE nrp_people_fk = @person;
+    DELETE FROM dogs WHERE dog_person_fk = @person;
+    DELETE FROM admins WHERE admin_person_fk = @person;
+    DELETE FROM people WHERE wc_customer_id = @person;
 END$$
 
 DELIMITER ;
