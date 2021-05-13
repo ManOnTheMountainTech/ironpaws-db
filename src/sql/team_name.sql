@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `team_name`
 --
 
-CREATE TABLE `team_name` (
+CREATE TABLE IF NOT EXISTS `team_name` (
   `id_tn_ai` int(11) NOT NULL,
   `name_tn` varchar(255) COLLATE utf8_unicode_520_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_520_ci COMMENT='This table provides a simple team name to hash index';

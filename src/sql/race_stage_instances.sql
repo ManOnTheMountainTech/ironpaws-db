@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `race_stage_instances`
 --
 
-CREATE TABLE `race_stage_instances` (
+CREATE TABLE IF NOT EXISTS `race_stage_instances` (
   `id_rsi_ai` int(11) NOT NULL,
   `stage_rsi` tinyint(4) NOT NULL COMMENT '1-based',
   `rsi_race_stage_def_fk` int(11) NOT NULL,

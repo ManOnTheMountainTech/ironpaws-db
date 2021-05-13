@@ -28,7 +28,7 @@ SET time_zone = "+00:00";
 -- Table structure for table `teams`
 --
 
-CREATE TABLE `teams` (
+CREATE TABLE IF NOT EXISTS `teams` (
   `team_id_ai` int(11) NOT NULL,
   `team_bib_number` int(11) DEFAULT NULL,
   `team_tn_fk` int(11) NOT NULL COMMENT 'Hash of the team name',

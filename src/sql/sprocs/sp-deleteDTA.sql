@@ -6,7 +6,7 @@ CREATE  PROCEDURE `sp_deleteDTA`(IN wc_customerIdArg INT)
     SQL SECURITY INVOKER
     COMMENT 'Deletes the dog table assignment from a WP/WC user Id.'
 BEGIN
-    DELETE FROM dog_team_assignments WHERE id_of_assignment_dta IN
+    DELETE FROM dog_team_assignments WHERE dta_id_ai IN
 	(SELECT id_of_assignment_dta from 
         (SELECT id_of_assignment_dta from people AS qi
             JOIN dogs AS d on (dog_people_fk = person_id_ai)
