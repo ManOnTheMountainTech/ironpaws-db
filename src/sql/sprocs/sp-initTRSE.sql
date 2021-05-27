@@ -1,4 +1,3 @@
-#USE `bryan_mush`;
 DROP procedure IF EXISTS `sp_initTRSE`;
 
 DELIMITER $$
