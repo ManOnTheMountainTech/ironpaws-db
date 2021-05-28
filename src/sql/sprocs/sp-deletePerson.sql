@@ -11,8 +11,7 @@ BEGIN
     CALL sp_getTeamsFromPersonIdAsTable(@person);
 
     CALL sp_deleteTRSE();
-    CALL sp_deleteRM();
-    CALL sp_deleteRI();
+    DELETE FROM `race_managers` WHERE rm_person_fk = @person;
 
     DELETE FROM awards_granted 
         WHERE ('team' = entity_type) AND (id_of_entity IN (SELECT * FROM team_clones));
@@ -35,7 +34,7 @@ BEGIN
     DELETE FROM non_racing_participation WHERE nrp_people_fk = @person;
     DELETE FROM dogs WHERE dog_person_fk = @person;
     DELETE FROM admins WHERE admin_person_fk = @person;
-    DELETE FROM people WHERE wc_customer_id = @person;
+    DELETE FROM people WHERE wc_customer_id = wc_customerIdArg;
 END$$
 
 DELIMITER ;

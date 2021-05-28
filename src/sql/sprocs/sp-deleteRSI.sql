@@ -1,10 +1,10 @@
 DROP procedure IF EXISTS `sp_deleteRSI`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_deleteRSI`()
-    READS SQL DATA
+CREATE  PROCEDURE `sp_deleteRSI`(IN wc_prod_id_arg)
+    MODIFIES SQL DATA
     SQL SECURITY INVOKER
-    COMMENT 'Deletes the specified race stage instance given a person ID. v 0.002. Not tested.'
+    COMMENT 'Deletes the specified race stage instance given a wc product ID. v 0.002. Not tested.'
 BEGIN        
         DELETE FROM race_stage_instances rsi (
             SELECT id_rsi_ai FROM (

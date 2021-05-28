@@ -1,10 +1,10 @@
-DROP procedure IF EXISTS `sp_deleteRM`;
+DROP procedure IF EXISTS `sp_deleteRMByTeam`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_deleteRM`()
+CREATE  PROCEDURE `sp_deleteRMByTeam`()
     READS SQL DATA
     SQL SECURITY INVOKER
-    COMMENT 'Deletes the specified race instance given a person ID. v 0.001'
+    COMMENT 'Deletes the specified race manager given a person ID. v 0.001'
 BEGIN        
         #SELECT * FROM team_clones;
         #SELECT * FROM race_instances;
