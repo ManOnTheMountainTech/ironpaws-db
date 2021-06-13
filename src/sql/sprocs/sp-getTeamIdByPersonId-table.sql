@@ -1,7 +1,7 @@
-DROP procedure IF EXISTS `sp_getTeamIdByPersonId`;
+DROP procedure IF EXISTS `sp_getTeamIdByPersonId_table`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_getTeamIdByPersonId`(IN team_name_id INT)
+CREATE  PROCEDURE `sp_getTeamIdByPersonId-table`(IN team_id INT)
     READS SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Gets the teams owned by this person as a table.'
