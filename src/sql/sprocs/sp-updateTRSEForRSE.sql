@@ -16,7 +16,8 @@ BEGIN
         `elapsed_time` = eleapsed_time_arg,
         `stage_trse` = stage_trse_arg,
         `when_completed_trse` = when_completed_trse_arg
-    where (wc_order_id_trse = wc_order_id_trse_arg);
+    where ((wc_order_id_trse = wc_order_id_trse_arg) && 
+        (stage_trse = stage_trse_arg));
 END$$
 
 DELIMITER ;
