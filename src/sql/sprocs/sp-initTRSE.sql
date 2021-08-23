@@ -1,12 +1,14 @@
-#USE `bryan_mush`;
 DROP procedure IF EXISTS `sp_initTRSE`;
 
 DELIMITER $$
 
-CREATE PROCEDURE `sp_initTRSE` (IN wc_orderId INT, IN raceStageInstance_fk INT, IN team_fk INT)
+CREATE PROCEDURE `sp_initTRSE` (IN wc_orderId_arg INT, IN wc_prodId_arg INT, IN team_fk_arg INT, IN stage_trse_arg INT)
 BEGIN
-	INSERT INTO team_race_stage_entry (`trse_race_stage_instance_fk`, `trse_team_fk`, `wc_order_id_trse`) 
-	VALUES (raceStageInstance_fk, team_fk, wc_orderId);
+	insert into team_race_stage_entry (trse_rsd_fk, wc_order_id_trse, trse_team_fk)
+		values(
+			sf_getRSDIndexByWCAndStage(wc_prodId_arg, stage_trse_arg),
+			wc_orderId_arg,
+			team_fk_arg);
 	SELECT LAST_INSERT_ID();
 END$$
 
