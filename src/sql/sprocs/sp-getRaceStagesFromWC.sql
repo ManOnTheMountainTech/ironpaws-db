@@ -1,7 +1,7 @@
 DROP PROCEDURE IF EXISTS `sp_getRaceStagesFromWC`;
 
 DELIMITER $$
-CREATE PROCEDURE `sp_getRaceStagesFromWC`(
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getRaceStagesFromWC`(
 	IN wc_prod_id_arg INT)
 BEGIN
     SELECT stages_rd FROM race_defs 

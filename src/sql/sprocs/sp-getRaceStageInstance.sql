@@ -1,7 +1,7 @@
 DROP PROCEDURE IF EXISTS `sp_getRaceStageInstance`;
 
 DELIMITER $$
-CREATE PROCEDURE `sp_getRaceStageInstance`(
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getRaceStageInstance`(
 	IN wc_prod_id_arg INT)
 BEGIN
     SELECT DISTINCT rsi.rsi_race_instance_fk from race_stage_instances as rsi

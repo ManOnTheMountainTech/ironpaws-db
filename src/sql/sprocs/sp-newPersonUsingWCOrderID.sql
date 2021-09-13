@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_newPersonUsingWCOrderID`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_newPersonUsingWCOrderID`(IN salutation VARCHAR(255), IN wc_customerId INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_newPersonUsingWCOrderID`(IN salutation VARCHAR(255), IN wc_customerId INT)
     MODIFIES SQL DATA
     DETERMINISTIC
     SQL SECURITY INVOKER

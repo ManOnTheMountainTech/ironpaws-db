@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_getDogsFromPersonIdAsTable`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_getDogsFromPersonIdAsTable`(IN person_id INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getDogsFromPersonIdAsTable`(IN person_id INT)
     READS SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Gets the dogs owned by this person as a table.'

@@ -1,7 +1,7 @@
 DROP PROCEDURE IF EXISTS `sp_getTRSEScoreValues`;
 
 DELIMITER $$
-    CREATE PROCEDURE `sp_getTRSEScoreValues`(
+    CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getTRSEScoreValues`(
         IN wc_order_id_arg INT)
     BEGIN
         SELECT team_bib_number, 

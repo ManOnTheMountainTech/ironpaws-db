@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_deleteNRP`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_deleteNRP`(IN wc_customerIdArg INT)
+CREATE  DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteNRP`(IN wc_customerIdArg INT)
     MODIFIES SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Deletes non-racing participation from a WP/WC user Id.'

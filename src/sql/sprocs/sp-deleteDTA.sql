@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_deleteDTA`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_deleteDTA`(IN personIdArg INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteDTA`(IN personIdArg INT)
     MODIFIES SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Deletes the dog table assignment from a WP/WC user Id.'

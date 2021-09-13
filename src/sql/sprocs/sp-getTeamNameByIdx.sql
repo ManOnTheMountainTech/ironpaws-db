@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_getTeamNameByIdx`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_getTeamNameByIdx`(IN name_tn_arg INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getTeamNameByIdx`(IN name_tn_arg INT)
     READS SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Gets the teams owned by this person as result set.'

@@ -1,7 +1,7 @@
 DROP PROCEDURE IF EXISTS `sp_updateRaceInstances`;
 
 DELIMITER $$
-CREATE PROCEDURE `sp_updateRaceInstances`( 
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_updateRaceInstances`( 
     IN id_rd_ai INT,
     IN name_ri_arg VARCHAR(255), 
     IN ri_race_defs_fk_arg INT, 

@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_deletePerson`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_deletePerson`(IN wc_customerIdArg INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deletePerson`(IN wc_customerIdArg INT)
     MODIFIES SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Deletes a person from the database. All awards, positions, teams, and dogs are destroyed. v0.02'

@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_getAllTeamInfoAndTNByPersonId`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_getAllTeamInfoAndTNByPersonId`(IN person_id_arg INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getAllTeamInfoAndTNByPersonId`(IN person_id_arg INT)
     READS SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Gets all of the info abut this team as a result set.'

@@ -1,5 +1,7 @@
+DROP procedure IF EXISTS `sp_createTeamByIds`;
+
 DELIMITER $$
-CREATE PROCEDURE `sp_createTeamByIds`(
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_createTeamByIds`(
 	IN teamName_id INT,
     IN teamPerson_id INT,
     IN teamClass_id VARCHAR(255))

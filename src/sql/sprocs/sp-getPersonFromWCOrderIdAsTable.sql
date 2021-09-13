@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_getPersonFromWCOrderIdAsTable`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_getPersonFromWCOrderIdAsTable`(IN wc_customerIdArg INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getPersonFromWCOrderIdAsTable`(IN wc_customerIdArg INT)
     MODIFIES SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Retrieves a temp table of the person s entries a WP/WC user Id.'

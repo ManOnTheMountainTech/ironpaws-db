@@ -1,7 +1,7 @@
 DROP PROCEDURE IF EXISTS `sp_getAllRaceInstanceInfo`;
 
 DELIMITER $$
-CREATE PROCEDURE `sp_getAllRaceInstanceInfo`(
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getAllRaceInstanceInfo`(
 	IN wc_prod_id_arg INT)
 BEGIN
     SELECT DISTINCT id_ri_ai, name_ri, ri_race_defs_fk, start_date_time_ri 

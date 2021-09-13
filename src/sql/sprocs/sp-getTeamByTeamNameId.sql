@@ -1,4 +1,4 @@
-DROP procedure IF EXISTS `sp-getTeamByTeamNameId`;
+DROP procedure IF EXISTS `sp_getTeamsByTeamNameId`;
 
 DELIMITER $$
 CREATE  PROCEDURE `sp_getTeamsByTeamNameId`(IN team_name_id_arg INT)

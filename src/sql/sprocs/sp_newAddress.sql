@@ -1,10 +1,8 @@
-USE `bryany_mush`;
-DROP procedure IF EXISTS `NewAddress`;
+DROP procedure IF EXISTS `sp_newAddress`;
 
 DELIMITER $$
-USE `bryany_mush`$$
 
-CREATE PROCEDURE `NewAddress`(
+CREATE PROCEDURE `sp_newAddress`(
 	address VARCHAR(255),
 	poBox INT,
     city VARCHAR(255),

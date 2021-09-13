@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_deleteRI`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_deleteRI`()
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteRI`()
     READS SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Deletes the specified race instance given a person ID. v 0.001'
