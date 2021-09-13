@@ -1,3 +1,5 @@
+DROP procedure IF EXISTS `sp_sprocsCrashTests`;
+
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_sprocsCrashTests`()
     READS SQL DATA

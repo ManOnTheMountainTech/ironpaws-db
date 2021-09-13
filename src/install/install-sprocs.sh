@@ -10,9 +10,9 @@ if [ -z "$1" ];
 	exit 2
 fi
 
-pushd ~/mush-code/src/sql/sprocs
+pushd ../sql/sprocs
 echo "Installing sprocs..."
-~/mush-code/src/install/mysql-exec.sh %1
-cd ~/mush-code/src/sql/sfuncs
-~/mush-code/src/install/mysql-exec.sh %1
+../../install/mysql-exec.sh $1
+cd ../sfuncs
+../../install/mysql-exec.sh $1
 popd
