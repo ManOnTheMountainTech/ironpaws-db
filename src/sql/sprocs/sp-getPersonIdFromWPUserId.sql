@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_getPersonIdFromWPUserId`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_getPersonIdFromWPUserId`(IN wc_customerIdArg INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getPersonIdFromWPUserId`(IN wc_customerIdArg INT)
     READS SQL DATA
     DETERMINISTIC
     SQL SECURITY INVOKER

@@ -1,7 +1,7 @@
-DROP FUNCTION IF EXISTS `sp_getPersonIdFromWPUserId`;
+DROP FUNCTION IF EXISTS `sf_getPersonIdFromWPUserId`;
 
 DELIMITER $$
-CREATE FUNCTION `sf_getPersonIdFromWPUserId`(wc_customerIdArg INT)
+CREATE DEFINER=`bryan`@`localhost` FUNCTION `sf_getPersonIdFromWPUserId`(wc_customerIdArg INT)
 RETURNS INT
     READS SQL DATA
     DETERMINISTIC

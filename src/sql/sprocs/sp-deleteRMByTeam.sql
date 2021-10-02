@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_deleteRMByTeam`;
 
 DELIMITER $$
-CREATE  PROCEDURE `sp_deleteRMByTeam`()
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteRMByTeam`()
     READS SQL DATA
     SQL SECURITY INVOKER
     COMMENT 'Deletes the specified race manager given a person ID. v 0.001'

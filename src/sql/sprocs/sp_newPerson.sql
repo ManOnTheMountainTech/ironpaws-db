@@ -1,9 +1,8 @@
-USE `bryany_mush`;
-DROP procedure IF EXISTS `NewPerson`;
+DROP procedure IF EXISTS `sp_newPerson`;
 
 DELIMITER $$
-USE `bryany_mush`$$
-CREATE PROCEDURE `NewPerson`(
+
+CREATE PROCEDURE `sp_newPerson`(
     IN argSalutation VARCHAR(255), 
 	IN argPersonName VARCHAR(255),
     IN argLanguage SMALLINT)
