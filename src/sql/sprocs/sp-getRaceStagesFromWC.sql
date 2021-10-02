@@ -5,7 +5,7 @@ CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getRaceStagesFromWC`(
 	IN wc_prod_id_arg INT)
 BEGIN
     SELECT stages_rd FROM race_defs 
-	    JOIN race_instances ON (id_ri_ai = id_rd_ai)
+	    JOIN race_instances ON (ri_race_defs_fk = id_rd_ai)
         WHERE (wc_prod_id_ri = wc_prod_id_arg);  
 END$$
 
