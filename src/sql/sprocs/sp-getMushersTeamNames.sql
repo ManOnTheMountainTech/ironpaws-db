@@ -5,7 +5,7 @@ DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getMushersTeamNames`(IN people_id INT)
     COMMENT 'Gets the names of the teams the musher has created' 
     DETERMINISTIC READS SQL DATA 
-    SQL SECURITY INVOKER 
+    SQL SECURITY DEFINER
     BEGIN 
         SELECT team_name.id_tn_ai, team_name.name_tn FROM teams 
             INNER JOIN team_name ON (team_name.id_tn_ai = teams.team_tn_fk) where 

@@ -11,7 +11,7 @@ CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_updateTRSEForRSE`(
     IN run_class_id_arg INT)
     MODIFIES SQL DATA
     DETERMINISTIC
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Updates a team race stage entry (TRSE) v0.2'
 BEGIN
     update team_race_stage_entry 

@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `sp_deleteTRSE`;
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteTRSE`()
     READS SQL DATA
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Deletes the specified race stage instance given a person ID. v 0.003'
 BEGIN        
         DELETE FROM team_race_stage_entry WHERE (trse_team_fk IN (

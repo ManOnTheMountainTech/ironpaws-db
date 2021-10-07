@@ -4,7 +4,7 @@ DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getAllWCOrders`()
     READS SQL DATA
     DETERMINISTIC
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Gets all of the WooCommerce orders v0.1.'
 BEGIN
     SELECT `wc_order_id_trse` FROM `team_race_stage_entry`;

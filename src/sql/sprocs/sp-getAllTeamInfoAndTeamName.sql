@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `sp_getAllTeamInfoByPersonId`;
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getAllTeamInfoByPersonId`(IN person_id_arg INT)
     READS SQL DATA
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Gets all of the info abut this team as a result set.'
 BEGIN
     SELECT team_id_ai, team_bib_number, team_tn_fk, team_class_id 

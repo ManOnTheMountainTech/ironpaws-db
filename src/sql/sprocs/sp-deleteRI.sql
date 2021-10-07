@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `sp_deleteRI`;
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteRI`()
     READS SQL DATA
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Deletes the specified race instance given a person ID. v 0.001'
 BEGIN
     CREATE TEMPORARY TABLE race_instance_clones(

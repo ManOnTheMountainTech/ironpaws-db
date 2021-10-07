@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `sp_getDogsFromPersonIdAsTable`;
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getDogsFromPersonIdAsTable`(IN person_id INT)
     READS SQL DATA
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Gets the dogs owned by this person as a table.'
 BEGIN
     CREATE TEMPORARY TABLE dog_clones(

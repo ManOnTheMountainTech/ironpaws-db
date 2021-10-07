@@ -4,7 +4,7 @@ DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_sprocsCrashTests`()
     READS SQL DATA
     DETERMINISTIC
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Basic crash tests'
 BEGIN
     CALL sp_getTeamsFromPersonIdAsTable(4);

@@ -3,7 +3,7 @@ DROP procedure IF EXISTS `sp_deleteDTAByWCUserId`;
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteDTAByWCUserId`(IN wc_customerIdArg INT)
     MODIFIES SQL DATA
-    SQL SECURITY INVOKER
+    SQL SECURITY DEFINER
     COMMENT 'Deletes the dog table assignment from a WP/WC user Id.'
 BEGIN
     DELETE FROM dog_team_assignments WHERE dta_id_ai IN
