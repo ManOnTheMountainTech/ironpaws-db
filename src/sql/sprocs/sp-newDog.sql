@@ -2,7 +2,7 @@ DROP PROCEDURE IF EXISTS `sp_newDog`;
 
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` 
-PROCEDURE `sp_newDog`(IN `dogName` VARCHAR(21845), IN `dogAge` INT, IN `dogOwnerId` INT)
+PROCEDURE `sp_newDog`(IN `dogName` VARCHAR(16383), IN `dogAge` INT, IN `dogOwnerId` INT)
     MODIFIES SQL DATA
     DETERMINISTIC
     SQL SECURITY DEFINER

@@ -1,7 +1,7 @@
 DROP PROCEDURE IF EXISTS `sp_getCurrentDog_TeamAssignment`;
 
 DELIMITER $$
-CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getCurrentDog_TeamAssignment`(IN `doggies` VARCHAR(21845))
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getCurrentDog_TeamAssignment`(IN `doggies` VARCHAR(16383))
     READS SQL DATA
     DETERMINISTIC
     SQL SECURITY DEFINER

@@ -1,4 +1,4 @@
-DROP procedure IF EXISTS `sp_deleteRMByTeam`;
+DROP procedure IF EXISTS `sp_deleteRM`;
 
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteRM`(IN person_id INT)
