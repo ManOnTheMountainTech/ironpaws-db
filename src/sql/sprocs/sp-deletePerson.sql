@@ -8,9 +8,7 @@ CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deletePerson`(IN wc_customerIdA
 BEGIN
     SET @person = sf_getPersonIdFromWPUserId(wc_customerIdArg);
 
-    CALL sp_getTeamsFromPersonIdAsTable(@person);
-
-    CALL sp_deleteTRSE();
+    CALL sp_deleteTRSE(@person);
     DELETE FROM `race_managers` WHERE rm_person_fk = @person;
 
     DELETE FROM awards_granted 
