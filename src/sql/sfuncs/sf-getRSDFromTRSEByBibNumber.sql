@@ -1,3 +1,5 @@
+DROP FUNCTION IF EXISTS `sf_getRSDFromTRSEByBibNumber`;
+
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` FUNCTION `sf_getRSDFromTRSEByBibNumber`(`raceStage` INT UNSIGNED, `bibNumber` INT UNSIGNED, `prodId` INT UNSIGNED) RETURNS int unsigned
     READS SQL DATA

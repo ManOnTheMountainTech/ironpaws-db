@@ -11,7 +11,7 @@ DELIMITER $$
             team_class_id, #4
             name_tn,
             run_class_id, #6
-            people_distance_unit_id, #7
+            people_distance_unit #7
         FROM `team_race_stage_entry` 
             JOIN teams ON (trse_team_fk = team_id_ai)
             JOIN team_name ON (team_tn_fk = id_tn_ai)

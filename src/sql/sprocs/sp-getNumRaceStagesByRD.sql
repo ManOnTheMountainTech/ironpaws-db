@@ -1,4 +1,4 @@
-DROP PROCEDURE IF EXISTS `sp_getByRD`;
+DROP PROCEDURE IF EXISTS `sp_getNumRaceStagesByRD`;
 
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getNumRaceStagesByRD`(
