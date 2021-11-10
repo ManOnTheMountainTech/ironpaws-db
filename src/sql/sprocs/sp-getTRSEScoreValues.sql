@@ -5,12 +5,13 @@ DELIMITER $$
         IN wc_order_id_arg INT)
     BEGIN
         SELECT team_bib_number, #0
-            miles_trse, #1
-            outcome_trse, 
-            wc_customer_id, #3 
-            team_class_id, 
-            name_tn, #5
-            run_class_id #6
+            miles_timestamp_trse, #1
+            outcome_trse, #2
+            wc_customer_id,
+            team_class_id, #4
+            name_tn,
+            run_class_id, #6
+            people_distance_unit_id, #7
         FROM `team_race_stage_entry` 
             JOIN teams ON (trse_team_fk = team_id_ai)
             JOIN team_name ON (team_tn_fk = id_tn_ai)

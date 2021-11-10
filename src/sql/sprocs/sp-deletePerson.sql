@@ -28,7 +28,7 @@ BEGIN
     DELETE FROM social_event_leaders WHERE id_sel_person_fk = @person;
     DELETE FROM region_cocaptains WHERE rc_person_fk = @person;
 
-    DELETE FROM phones WHERE phone_person_id = @person;
+    DELETE FROM phones WHERE phone_person_fk = @person;
     DELETE FROM non_racing_participation WHERE nrp_people_fk = @person;
     DELETE FROM dogs WHERE dog_person_fk = @person;
     DELETE FROM admins WHERE admin_person_fk = @person;

@@ -9,7 +9,7 @@ BEGIN
 			(SELECT id_rsd_ai FROM race_stage_defs
 			JOIN race_defs on (rsd_race_def_fk = id_rd_ai)
 			JOIN race_instances on (ri_race_defs_fk = id_rd_ai)
-			where ((stage = stage_rsd) && (wcProdId = wc_prod_id_ri))),
+			where ((stage = stage_rsd) AND (wcProdId = wc_prod_id_ri))),
 				wc_orderId_arg,
 				team_fk_arg);
 	SELECT LAST_INSERT_ID();

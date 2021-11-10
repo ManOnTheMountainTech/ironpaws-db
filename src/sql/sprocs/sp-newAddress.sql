@@ -2,7 +2,7 @@ DROP procedure IF EXISTS `sp_newAddress`;
 
 DELIMITER $$
 
-CREATE PROCEDURE `sp_newAddress`(
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_newAddress`(
 	addressArg VARCHAR(255),
 	poBox INT,
     city VARCHAR(255),
@@ -24,6 +24,10 @@ CREATE PROCEDURE `sp_newAddress`(
     department VARCHAR(255),
     buildingName VARCHAR(255),
     addrType ENUM('mailing','street','url',''))
+        MODIFIES SQL DATA
+        DETERMINISTIC
+        SQL SECURITY DEFINER
+        COMMENT 'Inserts a new address into the database v0.01'
 BEGIN
 	INSERT INTO world_addresses(
 		address_wa, 
