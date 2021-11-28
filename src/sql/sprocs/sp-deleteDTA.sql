@@ -11,6 +11,8 @@ BEGIN
         (SELECT id_of_assignment_dta from people AS qi
             JOIN dogs AS d on (dog_people_fk = person_id_ai)
             WHERE (dog_person_fk = personIdArg)) as qo);
+    
+    SELECT ROW_COUNT();
 END$$
 
 DELIMITER ;

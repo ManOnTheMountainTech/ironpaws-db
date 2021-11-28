@@ -16,6 +16,8 @@ BEGIN
             JOIN team_clones ON (ri_team_fk = team_id)) as qo);
 
     DELETE FROM race_instances WHERE ri_team_fk IN (SELECT * FROM race_instance_clones);
+
+    SELECT ROW_COUNT();
 END$$
 
 DELIMITER ;

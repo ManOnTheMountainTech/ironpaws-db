@@ -12,5 +12,7 @@ BEGIN
             SELECT team_id FROM 
                 (SELECT team_id FROM team_clones tc 
                 JOIN team_race_stage_entry trse ON (trse.trse_team_fk = tc.team_id)) as qo));
+
+	SELECT ROW_COUNT();
 END$$
 DELIMITER ;

@@ -12,6 +12,8 @@ BEGIN
             JOIN dogs AS d on (dog_people_fk = person_id_ai)
             JOIN dog_team_assignments AS dta on (dta_dog_fk = dog_id_ai)
             WHERE (wc_customer_id = wc_customerIdArg)) as qo);
+
+    SELECT ROW_COUNT();
 END$$
 
 DELIMITER ;

@@ -1,0 +1,22 @@
+Class,skijor,fatbikejor,sled,snowshoe,canicross,bikejor,cart,scooter,fatbike dryland,fatbike snow,fatbike ice,fatbike sand
+Skijor,1,0.5,0.5,0.5,0.5,0.5,0.5,0.5,,,,
+1 dog sled ,0.5,0.5,1,0.5,0.5,0.5,0.5,0.5,,,,
+2 dog sled,0.5,0.5,1,0.5,0.5,0.5,0.5,0.5,,,,
+4 dog sled,0.5,0.5,1,0.5,0.5,0.5,0.5,0.5,,,,
+4 dog skijor,1,0.5,0.5,0.5,0.5,0.5,0.5,0.5,,,,
+6 dog sled,0.5,0.5,1,0.5,0.5,0.5,1,0.5,,,,
+Unlimited dog sled,0.5,0.5,1,0.5,0.5,0.5,1,0.5,,,,
+Canicross,0.5,0,0,1,1,0,0,0,,,,
+4 dog dryland,0.5,0.5,0.5,0.5,1,1,1,1,,,,
+1 dog fatbikejor,0.5,,0.5,0.5,0.5,0,0,0,1,1.5,1.5,1.5
+2 dog fatbikejor,0.5,,0.5,0.5,0.5,0,0,0,1,1.5,1.5,1.5
+1 dog bikejor,0.5,0.5,0.5,0.5,1,1,0.5,0.5,,,,
+2 dog bikejor,0.5,0.5,0.5,0.5,1,1,0.5,0.5,,,,
+1 dog scooter,0.5,0.5,0.5,0.5,1,0.5,1,1,,,,
+2 dog scooter,0.5,0.5,0.5,0.5,1,0.5,1,1,,,,
+,,,,,,,,,,,,
+,Miles/week,,,,,,,,,,,
+ODR,1,,,,,,,,,,,
+,,,,,,,,,,,,
+,Unknown,,,,,,,,,,,
+Off the couch,,,,,,,,,,,,

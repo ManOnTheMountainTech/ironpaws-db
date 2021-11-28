@@ -1,0 +1,29 @@
+Tables filled
+-admins
+-awards granted
+-award types
+-businesses
+-dogs
+-dog team assignments
+-people
+-phones
+-race_classes
+-race_defs
+-race_instances
+-race_managers
+-race_stage_defs
+-race_stage_instances
+-regions
+-region_cocaptains
+-social_events
+-teams
+-team_name
+-team_race_stage_entry
+-world_addresses
+-non_racing_participation
+-regional_team
+-social_event_leaders
+-team_race_entry
+
+Not filled
+
