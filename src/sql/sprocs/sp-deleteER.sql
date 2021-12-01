@@ -1,7 +1,5 @@
-DROP PROCEDURE IF EXISTS `sp_addER`;
-
 DELIMITER $$
-CREATE DEFINER=`bryan`@`localhost` C`(IN `erIdxArg` INT UNSIGNED, OUT `rows_changed` INT UNSIGNED)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteER`(IN `erIdxArg` INT UNSIGNED, OUT `rows_changed` INT UNSIGNED)
     MODIFIES SQL DATA
     DETERMINISTIC
     COMMENT 'Deletes an external reference entry by name, v 0.001.'
