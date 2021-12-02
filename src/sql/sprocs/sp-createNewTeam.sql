@@ -8,6 +8,7 @@ CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_createNewTeam`(IN `teamName` VA
 BEGIN
     DECLARE EXIT HANDLER FOR SQLEXCEPTION 
         BEGIN
+        	SHOW ERRORS;
             ROLLBACK;
             RESIGNAL;
         END;
@@ -15,8 +16,10 @@ BEGIN
 	START TRANSACTION;
         INSERT INTO team_name (`name_tn`) VALUES 
             (teamName COLLATE utf8mb4_0900_as_ci );	
-        INSERT INTO teams(`team_tn_fk`, `team_person_fk`, `team_class_id`)
-        VALUES (LAST_INSERT_ID(), teamPerson_id, teamClass_id);
+    COMMIT;
+	START TRANSACTION;
+       INSERT INTO teams(`team_tn_fk`, `team_person_fk`, `team_class_id`)
+       VALUES (LAST_INSERT_ID(), teamPerson_id, teamClass_id);		
   	COMMIT;
 END$$
 DELIMITER ;
