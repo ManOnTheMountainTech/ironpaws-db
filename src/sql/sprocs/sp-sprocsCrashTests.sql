@@ -7,12 +7,15 @@ CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_sprocsCrashTests`()
     SQL SECURITY DEFINER
     COMMENT 'Basic crash tests'
 BEGIN
-    CALL sp_getTeamsFromPersonIdAsTable(4);
-    SELECT * from team_clones;
+    CALL sp_newPersonUsingWCOrderId(9999);
+    set @newPerson := LAST_INSERT_ID();
 
-    CALL sp_getDogsFromPersonIdAsTable(4);
-    SELECT * from dog_clones;
+    CALL sp_createNewTeam ("FrankenDogs", @newPerson, 2);
 
-    CALL sp_deletePerson(100);
+    CALL sp_getTeamsFromPersonIdAsTable(@newPerson);
+
+    CALL sp_getDogsFromPersonIdAsTable(@newPerson);
+
+    CALL sp_deletePerson(@newPerson);
 END$$
 DELIMITER ;

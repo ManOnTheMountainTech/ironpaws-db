@@ -7,7 +7,7 @@ CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getDogsFromPersonIdAsTable`(IN 
     COMMENT 'Gets the dogs owned by this person as a table.'
 BEGIN
     CREATE TEMPORARY TABLE dog_clones(
-        dog_id INT PRIMARY KEY
+        dog_id INT UNSIGNED PRIMARY KEY
     );
     
     INSERT INTO dog_clones(dog_id)

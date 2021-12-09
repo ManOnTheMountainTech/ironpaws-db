@@ -1,7 +1,7 @@
 DROP procedure IF EXISTS `sp_getTeamIdByPersonId`;
 
 DELIMITER $$
-CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getTeamIdByPersonId`(IN team_name_id INT)
+CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getTeamIdByPersonId`(IN person_id INT UNSIGNED)
     READS SQL DATA
     SQL SECURITY DEFINER
     COMMENT 'Gets the teams owned by this person as result set.'

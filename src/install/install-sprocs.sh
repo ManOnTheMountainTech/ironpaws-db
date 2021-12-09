@@ -13,6 +13,8 @@ fi
 pushd ../sql/sprocs
 echo "Installing sprocs..."
 ../../install/mysql-exec.sh $1
-cd ../sfuncs
+cd teams
+../../../install/mysql-exec.sh $1
+cd ../../sfuncs
 ../../install/mysql-exec.sh $1
 popd

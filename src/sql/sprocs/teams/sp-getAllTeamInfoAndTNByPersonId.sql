@@ -6,9 +6,8 @@ CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_getAllTeamInfoAndTNByPersonId`(
     SQL SECURITY DEFINER
     COMMENT 'Gets all of the info abut this team as a result set.'
 BEGIN
-    SELECT team_id_ai, team_bib_number, team_tn_fk, team_class_id, name_tn
+    SELECT team_id_ai, team_bib_number, team_class_id, team_name
     FROM teams 
-    JOIN team_name on (id_tn_ai = team_tn_fk)
     WHERE team_person_fk = person_id_arg;
 END$$
 

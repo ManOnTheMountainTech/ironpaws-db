@@ -1,3 +1,5 @@
+DROP procedure IF EXISTS `sp_deleteER`;
+
 DELIMITER $$
 CREATE DEFINER=`bryan`@`localhost` PROCEDURE `sp_deleteER`(IN `erIdxArg` INT UNSIGNED, OUT `rows_changed` INT UNSIGNED)
     MODIFIES SQL DATA

@@ -12,8 +12,8 @@ BEGIN
     DELETE FROM `race_managers` WHERE rm_person_fk = @person;
 
     DELETE FROM awards_granted 
-        WHERE ('team' = entity_type) AND (id_of_entity IN (SELECT * FROM team_clones));
-    DROP TABLE team_clones; # Memory thriftiness
+        WHERE ('team' = entity_type) AND (id_of_entity IN 
+        (SELECT team_id_ai FROM teams));
     
     CALL sp_getDogsFromPersonIdAsTable(@person); 
     DELETE FROM awards_granted 
